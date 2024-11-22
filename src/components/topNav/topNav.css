@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* TopNav Styles */
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0170BD;
+    padding: 10px 20px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-icon {
+    color: white;
+}
+
+.username {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.logout-btn {
+    background-color: #ff4c4c;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #e63939;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        width: 100%;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-item {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .username {
+        display: none;
+    }
+
+    .topnav {
+        background-color: #0170BD;
+    }
+
+    .logout-btn {
+        padding: 5px;
+    }
+}
