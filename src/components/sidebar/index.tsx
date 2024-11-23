@@ -53,7 +53,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, isMobile, toggleSidebar, user
           <FaMoneyBillWave /> Transaction Volume
         </Link>
         <Link
-          to="/merchant-tracker"  // This will navigate to the Merchant Tracker screen
+          to={Paths.MERCHANTTRACKER}  // This will navigate to the Merchant Tracker screen
           className={`sidebar-item ${activeItem === '/merchant-tracker' ? 'active' : ''}`}
           onClick={() => handleItemClick('/merchant-tracker')}
         >
