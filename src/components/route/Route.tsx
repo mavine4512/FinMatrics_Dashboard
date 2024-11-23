@@ -3,17 +3,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 import TopNav from '../topNav';
 import Sidebar from '../sidebar';
-import SkeletonLoader from '../skeletonLoader';
 import ErrorFallBack from '../errorFallBack';
 import Dashboard from '../../pages/dashboard';
 import useStyles from './styles';
 import { Paths } from '../../enums';
 
-
-
-const UserAcquisition = lazy(() => import('../userAcquisition'));
-const TransactionVolume = lazy(() => import('../transactionVolume'));
-// const MerchantTracker = lazy(() => import('./components/Dashboard/MerchantTracker'));
+const UserAcquisition = lazy(() => import('../../pages/userAcquisition'));
+const TransactionVolume = lazy(() => import('../../pages/transactionVolume'));
+const MerchantTracker = lazy(() => import('../../pages/merchantTracker'));
 
 function RouteApp(): JSX.Element {
   const { switchContainer } = useStyles();
@@ -29,6 +26,7 @@ function RouteApp(): JSX.Element {
   };
 
   useEffect(() => {
+    {console.log('isSidebarOpen',isSidebarOpen)}
     updateMobileView();
     window.addEventListener('resize', updateMobileView);
     return () => window.removeEventListener('resize', updateMobileView);
@@ -40,7 +38,13 @@ function RouteApp(): JSX.Element {
         <TopNav toggleSidebar={toggleSidebar} isMobile={isMobile} username="Admin Tom" />
         <div>
            <Sidebar isOpen={isSidebarOpen} isMobile={isMobile} toggleSidebar={toggleSidebar} username="Admin Tom" />
-           <div style={{ marginLeft: isSidebarOpen ? '250px' : '0' }}>
+           <div 
+           style={{ 
+              marginLeft: isMobile && isSidebarOpen ? '50px' : isMobile ? '0' : isSidebarOpen ? '260px' : '0',  
+              backgroundColor: '#f4f6f8',
+            }}
+            >
+              
             <Routes>
               <Route path={Paths.DASHBOARD} element={<Dashboard />} />
               <Route
@@ -50,7 +54,7 @@ function RouteApp(): JSX.Element {
                     FallbackComponent={ErrorFallBack}
                     onReset={() => window.location.replace(Paths.DASHBOARD)}
                   >
-                    <Suspense fallback={<SkeletonLoader />}>
+                    <Suspense fallback={<div><h2>Data Loading...</h2></div>}>
                       <UserAcquisition />
                     </Suspense>
                   </ErrorBoundary>
@@ -59,9 +63,27 @@ function RouteApp(): JSX.Element {
               <Route
                 path={Paths.TRANSACTIONVALUME}
                 element={
-                  <Suspense fallback={<SkeletonLoader />}>
+                  <ErrorBoundary
+                    FallbackComponent={ErrorFallBack}
+                    onReset={() => window.location.replace(Paths.DASHBOARD)}
+                  >
+                  <Suspense fallback={<div><h2>Data Loading...</h2></div>}>
                     <TransactionVolume />
                   </Suspense>
+                  </ErrorBoundary>
+                }
+              />
+              <Route
+                path={Paths.MERCHANTTRACKER}
+                element={
+                  <ErrorBoundary
+                    FallbackComponent={ErrorFallBack}
+                    onReset={() => window.location.replace(Paths.DASHBOARD)}
+                  >
+                  <Suspense fallback={<div><h2>Data Loading...</h2></div>}>
+                    <MerchantTracker />
+                  </Suspense>
+                  </ErrorBoundary>
                 }
               />
             </Routes>

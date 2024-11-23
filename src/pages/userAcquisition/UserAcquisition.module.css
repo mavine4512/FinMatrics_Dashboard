@@ -1,0 +1,50 @@
+.userAcquisition {
+    margin-left: 270px;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.filters select {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.merchantInsights {
+    margin-top: 20px;
+}
+
+.merchantInsights p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .filters select {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .section {
+        margin-bottom: 20px;
+    }
+
+    .merchantInsights p {
+        font-size: 14px;
+    }
+    .userAcquisition {
+       margin-left: 10px;
+       margin-right: 10px;
+    }
+}

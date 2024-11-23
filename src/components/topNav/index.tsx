@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './topNav.css';
 import { FaUserCircle } from 'react-icons/fa';
+import { FiLogOut } from 'react-icons/fi';
 import LogoutModal from '../logoutModal';
 
 interface TopNavProps {
@@ -34,6 +35,7 @@ const TopNav: React.FC<TopNavProps> = ({ toggleSidebar, isMobile, username }) =>
         <FaUserCircle size={24} className="user-icon" />
         <span className="username">{username}</span>
         <button className="logout-btn" onClick={handleLogoutClick}>
+          <FiLogOut size={20} className="logout-icon" />
           Logout
         </button>
       </div>

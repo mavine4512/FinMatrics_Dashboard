@@ -1,0 +1,26 @@
+.card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  gap: 10px;
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.content {
+  text-align: left;
+}
+
+.label {
+  font-size: 1rem;
+}
+
+.value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}

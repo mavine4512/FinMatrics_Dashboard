@@ -29,8 +29,12 @@ body {
 
 .user-icon {
     color: white;
-}
 
+}
+.logout-icon {
+    margin-right: 2px;
+    color: #fff;
+}
 .username {
     font-size: 1rem;
     font-weight: 500;
@@ -38,6 +42,9 @@ body {
 
 .logout-btn {
     background-color: #ff4c4c;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     border: none;
     color: white;
     padding: 5px 10px;
@@ -52,15 +59,9 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .sidebar {
-        position: fixed;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        transform: translateX(-100%);
+    .topnav{
         width: 100%;
     }
-
     .sidebar.open {
         transform: translateX(0);
     }
@@ -80,5 +81,10 @@ body {
 
     .logout-btn {
         padding: 5px;
+    }
+}
+@media (max-width: 320px) {
+.topnav {
+        width: 100%;
     }
 }

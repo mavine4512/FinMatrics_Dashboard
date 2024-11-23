@@ -1,6 +1,7 @@
 export enum Paths {
   DASHBOARD = '/',
   USERACQUISITION = '/UserAcquisition',
-  TRANSACTIONVALUME = '/TransactionVolume'
+  TRANSACTIONVALUME = '/TransactionVolume',
+  MERCHANTTRACKER = '/MerchantTracker'
 
 }
