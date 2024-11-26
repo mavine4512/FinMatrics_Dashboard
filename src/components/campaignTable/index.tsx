@@ -10,28 +10,30 @@ const CampaignTable: React.FC = () => {
   return (
     <div className={styles.tableContainer}>
       <h3>Top Performing Campaigns</h3>
-      <table className={styles.table}>
-        <thead>
-          <tr>
-            <th>Campaign</th>
-            <th>Impressions</th>
-            <th>Clicks</th>
-            <th>Conversions</th>
-            <th>ROI</th>
-          </tr>
-        </thead>
-        <tbody>
-          {campaigns.map((campaign, index) => (
-            <tr key={index}>
-              <td>{campaign.name}</td>
-              <td>{campaign.impressions}</td>
-              <td>{campaign.clicks}</td>
-              <td>{campaign.conversions}</td>
-              <td>{campaign.roi}</td>
+      <div className={styles.responsiveTable}>
+        <table className={styles.table}>
+          <thead>
+            <tr>
+              <th>Campaign</th>
+              <th>Impressions</th>
+              <th>Clicks</th>
+              <th>Conversions</th>
+              <th>ROI</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {campaigns.map((campaign, index) => (
+              <tr key={index}>
+                <td data-label="Campaign">{campaign.name}</td>
+                <td data-label="Impressions">{campaign.impressions}</td>
+                <td data-label="Clicks">{campaign.clicks}</td>
+                <td data-label="Conversions">{campaign.conversions}</td>
+                <td data-label="ROI">{campaign.roi}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
