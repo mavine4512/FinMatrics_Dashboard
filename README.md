@@ -142,6 +142,8 @@ Contributions are welcome! Feel free to submit issues or pull requests.
 
 ![alt text](https://github.com/mavine4512/FinMatrics_Dashboard/blob/main/src/assets/merchantTracker.png?raw=true)
 
+![alt text](https://github.com/mavine4512/FinMatrics_Dashboard/blob/main/src/assets/merchantLogout.png?raw=true)
+
 ![alt text](https://github.com/mavine4512/FinMatrics_Dashboard/blob/main/src/assets/transactionVolume.png?raw=true)
 
 ![alt text](https://github.com/mavine4512/FinMatrics_Dashboard/blob/main/src/assets/userAcqusitions.png?raw=true)
