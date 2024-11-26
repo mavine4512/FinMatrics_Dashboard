@@ -133,6 +133,21 @@ Customization
 ## Contributions
 Contributions are welcome! Feel free to submit issues or pull requests.
 
+## How the project look like
+ ![alt text](https://github.com/mavine4512/FinMatrics_Dashboard/blob/main/src/assets/dashboard.png?raw=true)
+  
+![alt text](https://github.com/mavine4512/FinMatrics_Dashboard/blob/main/src/assets/dashboardOnMobile.png?raw=true)
+
+![alt text](https://github.com/mavine4512/FinMatrics_Dashboard/blob/main/src/assets/menuItems.png?raw=true)
+
+![alt text](https://github.com/mavine4512/FinMatrics_Dashboard/blob/main/src/assets/merchantTracker.png?raw=true)
+
+![alt text](https://github.com/mavine4512/FinMatrics_Dashboard/blob/main/src/assets/transactionVolume.png?raw=true)
+
+![alt text](https://github.com/mavine4512/FinMatrics_Dashboard/blob/main/src/assets/userAcqusitions.png?raw=true)
+
+![alt text](https://github.com/mavine4512/FinMatrics_Dashboard/blob/main/src/assets/userAcqui.png?raw=true)
+
 ## Author
 
 - [Mavine Naaman](https://github.com/mavine4512)
