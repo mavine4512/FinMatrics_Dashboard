@@ -36,14 +36,18 @@ function RouteApp(): JSX.Element {
       <div className={switchContainer}>
         <TopNav toggleSidebar={toggleSidebar} isMobile={isMobile} username="Admin Tom" />
         <div>
-           <Sidebar isOpen={isSidebarOpen} isMobile={isMobile} toggleSidebar={toggleSidebar} username="Admin Tom" />
-           <div 
-           style={{ 
-              marginLeft: isMobile && isSidebarOpen ? '50px' : isMobile ? '0' : isSidebarOpen ? '260px' : '0',  
+          <Sidebar
+            isOpen={isSidebarOpen}
+            isMobile={isMobile}
+            toggleSidebar={toggleSidebar}
+            username="Admin Tom"
+          />
+          <div
+            style={{
+              marginLeft: isMobile && isSidebarOpen ? '50px' : isMobile ? '0' : isSidebarOpen ? '260px' : '0',
               backgroundColor: '#f4f6f8',
             }}
-            >
-              
+          >
             <Routes>
               <Route path={Paths.DASHBOARD} element={<Dashboard />} />
               <Route
@@ -66,9 +70,9 @@ function RouteApp(): JSX.Element {
                     FallbackComponent={ErrorFallBack}
                     onReset={() => window.location.replace(Paths.DASHBOARD)}
                   >
-                  <Suspense fallback={<div><h2>Data Loading...</h2></div>}>
-                    <TransactionVolume />
-                  </Suspense>
+                    <Suspense fallback={<div><h2>Data Loading...</h2></div>}>
+                      <TransactionVolume />
+                    </Suspense>
                   </ErrorBoundary>
                 }
               />
@@ -79,14 +83,14 @@ function RouteApp(): JSX.Element {
                     FallbackComponent={ErrorFallBack}
                     onReset={() => window.location.replace(Paths.DASHBOARD)}
                   >
-                  <Suspense fallback={<div><h2>Data Loading...</h2></div>}>
-                    <MerchantTracker />
-                  </Suspense>
+                    <Suspense fallback={<div><h2>Data Loading...</h2></div>}>
+                      <MerchantTracker />
+                    </Suspense>
                   </ErrorBoundary>
                 }
               />
             </Routes>
-           </div>
+          </div>
         </div>
       </div>
     </Router>
