@@ -26,10 +26,11 @@ function RouteApp(): JSX.Element {
   };
 
   useEffect(() => {
+    {console.log('isSidebarOpen',isSidebarOpen)}
     updateMobileView();
     window.addEventListener('resize', updateMobileView);
     return () => window.removeEventListener('resize', updateMobileView);
-  }, []);
+  }, [isSidebarOpen]);
 
   return (
     <Router>
