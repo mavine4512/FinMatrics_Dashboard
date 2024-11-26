@@ -6,7 +6,7 @@ import {
 export const primaryColor = {
   borderGray: '#e3e3e3',
   danger: '#C70039',
-  lightBlue: '#4663ac',
+  lightBlue: '#0170BD',
   lightGray: '#ededed',
 };
 
